@@ -5,30 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Akamai Caching Basic - Yet Another Tech Blog</title><meta name="Description" content=""><meta property="og:title" content="Akamai Caching Basic" />
-<meta property="og:description" content="一些比较特殊的状态码的缓存规则笔记。" />
+        <title>Deploy Blog by Hugo - Yet Another Tech Blog</title><meta name="Description" content=""><meta property="og:title" content="Deploy Blog by Hugo" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fallenpal-github-io.vercel.app/akamai-caching-basic/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-03-06T23:47:38&#43;08:00" />
-<meta property="article:modified_time" content="2021-03-06T23:47:38&#43;08:00" />
+<meta property="og:url" content="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-03-06T23:16:51&#43;08:00" />
+<meta property="article:modified_time" content="2020-03-06T23:16:51&#43;08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Akamai Caching Basic"/>
-<meta name="twitter:description" content="一些比较特殊的状态码的缓存规则笔记。"/>
+<meta name="twitter:title" content="Deploy Blog by Hugo"/>
+<meta name="twitter:description" content=""/>
 <meta name="application-name" content="Fallenpal">
 <meta name="apple-mobile-web-app-title" content="Fallenpal"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://fallenpal-github-io.vercel.app/akamai-caching-basic/" /><link rel="prev" href="http://fallenpal-github-io.vercel.app/first_post/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/" /><link rel="next" href="http://fallenpal-github-io.vercel.app/first_post/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Akamai Caching Basic",
+        "headline": "Deploy Blog by Hugo",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/fallenpal-github-io.vercel.app\/akamai-caching-basic\/"
-        },"genre": "posts","wordcount":  658 ,
-        "url": "http:\/\/fallenpal-github-io.vercel.app\/akamai-caching-basic\/","datePublished": "2021-03-06T23:47:38+08:00","dateModified": "2021-03-06T23:47:38+08:00","publisher": {
+            "@id": "http:\/\/fallenpal-github-io.vercel.app\/deploy-blog-by-hugo\/"
+        },"genre": "posts","wordcount":  128 ,
+        "url": "http:\/\/fallenpal-github-io.vercel.app\/deploy-blog-by-hugo\/","datePublished": "2019-03-06T23:16:51+08:00","dateModified": "2020-03-06T23:16:51+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -102,10 +102,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Akamai Caching Basic</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Deploy Blog by Hugo</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Fallenpal</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-03-06">2021-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 658 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-03-06">2019-03-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 128 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -113,64 +113,68 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#http-status-codes">HTTP Status Codes</a>
+    <li><a href="#hugo配置">Hugo配置</a>
       <ul>
-        <li><a href="#302">302</a></li>
-        <li><a href="#403">403</a></li>
+        <li><a href="#test">test</a>
+          <ul>
+            <li><a href="#something">something</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
-    <li><a href="#negatively-cache">Negatively Cache</a>
-      <ul>
-        <li><a href="#nagtive-ttl">nagtive-ttl</a></li>
-        <li><a href="#保留stale-cache">保留stale cache</a></li>
-      </ul>
-    </li>
+    <li><a href="#github-pages设置">Github Pages设置</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><p>一些比较特殊的状态码的缓存规则笔记。</p>
-<h1 id="akamai-caching-behaviors">Akamai Caching Behaviors</h1>
-<h2 id="http-status-codes">HTTP Status Codes</h2>
-<h3 id="302">302</h3>
-<p>A <code>302</code> Moved Temporarily is cached depending on whether or not it contains a Cache-Control or Expires header. If neither of these headers is present in the response, the <code>302</code> is treated as uncacheable. If either of these headers is present, then the response is considered cacheable. Cacheable 302s receive the same time-to-live that a 200 OK response receives.</p>
-<p><code>301状态码</code>：默认情况下，Edge会使用对待200状态码的做法，处理301</p>
-<p><code>302状态码</code>：取决于源站响应是否包含<code>Cache-control</code> 或 <code>Expire</code> 头。如果两者都不包含，则不缓存。否则使用对待200状态码的做法。如果配置了metadata: <code>cache:cache-302</code>， 则不管是否存在这两个头，都会缓存该内容。</p>
-<h3 id="403">403</h3>
-<p>默认是不缓存<code>403</code>的，仅当手动开启<code>cache:cache-403</code> 后，才会缓存403。</p>
-<h2 id="negatively-cache">Negatively Cache</h2>
-<h3 id="nagtive-ttl">nagtive-ttl</h3>
-<p>Akamai Edge servers will cache &ldquo;negative&rdquo; responses, which include the <code>204</code>, <code>305</code>, <code>404</code>, <code>405</code>, and <code>501</code> response codes, received from the origin server for 10 seconds by default unless otherwise explicitly stated or customized.</p>
-<p>Akamai 默认情况下，缓存以下“错误码“，TTL为10秒：<code>204</code>, <code>305</code>, <code>404</code>, <code>405</code>, and <code>501</code>。ACC内的选项为 <code>Cache HTTP error responses</code>, metadata内为 <code>&lt;cache:negative-ttl&gt;</code></p>
-<p>除了<code>&lt;cache:negative-ttl&gt;</code>以外，metadata还提供了第二个选项<code>&lt;cache:negative-ttl2&gt;</code>，用于自定义某些状态码的缓存时间。比如：</p>
+            </div><div class="content" id="content"><h1 id="hugo-部署个人博客">Hugo 部署个人博客</h1>
+<h2 id="hugo配置">Hugo配置</h2>
+<h3 id="test">test</h3>
+<h4 id="something">something</h4>
+<p>生成静态页面</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hugo --baseUrl=&#34;http://fallenpal.github.io/
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="github-pages设置">Github Pages设置</h2>
+<ol>
+<li>申请一个<code>USERNAME.github.io</code>的repo</li>
+<li>将上一步生成的public目录同步到Github：</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;match:response.status</span> <span class="na">value=</span><span class="s">”404”</span><span class="nt">&gt;</span> <span class="nt">&lt;cache:negative-ttl2&gt;</span>
-      <span class="nt">&lt;status&gt;</span>on<span class="nt">&lt;/status&gt;</span>
-<span class="nt">&lt;value&gt;</span>1d<span class="nt">&lt;/value&gt;</span> <span class="nt">&lt;/cache:negative-ttl2&gt;</span>
-<span class="nt">&lt;/match:response.status&gt;</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> public 
+git init  
+git remote add origin git@github.com:fallenpal/fallenpal.github.io.git
+git add .
+git commit -m <span class="s2">&#34;initial version&#34;</span>
+git push -u origin main // 推送到github上的repo
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="保留stale-cache">保留stale cache</h3>
-<p><code>cache:preserve-stale-objects</code>这个选项使得Akamai从源站收到 <code>400</code> , <code>500</code> , <code>502</code> , <code>503</code> , <code>504</code> 时，会使用stale的缓存答复客户。该选项默认为打开的。</p>
-<p>因此，默认情况下，Akamai不会缓存 <code>400</code> , <code>500</code> , <code>502</code> , <code>503</code> , <code>504</code> 这些状态码，除非把<code>cache:preserve-stale-objects</code> 设置为off。</p></div><div class="post-footer" id="post-footer">
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-03-06</span>
+                <span>更新于 2020-03-06</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/akamai-caching-basic/index.md" target="_blank">阅读原始文档</a>
+                            <a class="link-to-markdown" href="/deploy-blog-by-hugo/index.md" target="_blank">阅读原始文档</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://fallenpal-github-io.vercel.app/akamai-caching-basic/" data-title="Akamai Caching Basic" data-via="fallenpal"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://fallenpal-github-io.vercel.app/akamai-caching-basic/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://fallenpal-github-io.vercel.app/akamai-caching-basic/" data-title="Akamai Caching Basic" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://fallenpal-github-io.vercel.app/akamai-caching-basic/" data-title="Akamai Caching Basic"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Pocket" data-sharer="pocket" data-url="http://fallenpal-github-io.vercel.app/akamai-caching-basic/"><i class="fab fa-get-pocket fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://fallenpal-github-io.vercel.app/akamai-caching-basic/" data-title="Akamai Caching Basic"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="http://fallenpal-github-io.vercel.app/akamai-caching-basic/" data-title="Akamai Caching Basic" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://fallenpal-github-io.vercel.app/akamai-caching-basic/" data-title="Akamai Caching Basic" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://fallenpal-github-io.vercel.app/akamai-caching-basic/" data-title="Akamai Caching Basic"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/" data-title="Deploy Blog by Hugo" data-via="fallenpal"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/" data-title="Deploy Blog by Hugo" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/" data-title="Deploy Blog by Hugo"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Pocket" data-sharer="pocket" data-url="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/"><i class="fab fa-get-pocket fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/" data-title="Deploy Blog by Hugo"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/" data-title="Deploy Blog by Hugo" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/" data-title="Deploy Blog by Hugo" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/" data-title="Deploy Blog by Hugo"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -182,7 +186,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/first_post/" class="prev" rel="prev" title="First_post"><i class="fas fa-angle-left fa-fw"></i>First_post</a></div>
+    <div class="post-nav">
+            <a href="/first_post/" class="next" rel="next" title="First_post">First_post<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">

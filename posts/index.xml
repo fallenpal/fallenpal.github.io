@@ -1,22 +1,29 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - Yet Another Tech Blog</title>
-        <link>http://fallenpal.github.io/posts/</link>
+        <link>http://fallenpal-github-io.vercel.app/posts/</link>
         <description>所有文章 | Yet Another Tech Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fallenpal@gmail.com (Fallenpal)</managingEditor>
-            <webMaster>fallenpal@gmail.com (Fallenpal)</webMaster><lastBuildDate>Sat, 06 Mar 2021 23:47:38 &#43;0800</lastBuildDate><atom:link href="http://fallenpal.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>fallenpal@gmail.com (Fallenpal)</webMaster><lastBuildDate>Sat, 06 Mar 2021 23:47:38 &#43;0800</lastBuildDate><atom:link href="http://fallenpal-github-io.vercel.app/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Akamai Caching Basic</title>
-    <link>http://fallenpal.github.io/akamai-caching-basic/</link>
+    <link>http://fallenpal-github-io.vercel.app/akamai-caching-basic/</link>
     <pubDate>Sat, 06 Mar 2021 23:47:38 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://fallenpal.github.io/akamai-caching-basic/</guid>
-    <description><![CDATA[]]></description>
+    <guid>http://fallenpal-github-io.vercel.app/akamai-caching-basic/</guid>
+    <description><![CDATA[<p>一些比较特殊的状态码的缓存规则笔记。</p>]]></description>
 </item><item>
     <title>First_post</title>
-    <link>http://fallenpal.github.io/first_post/</link>
+    <link>http://fallenpal-github-io.vercel.app/first_post/</link>
     <pubDate>Sat, 06 Mar 2021 21:09:16 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://fallenpal.github.io/first_post/</guid>
+    <guid>http://fallenpal-github-io.vercel.app/first_post/</guid>
     <description><![CDATA[Hello World test sdfsdfdsf]]></description>
+</item><item>
+    <title>Deploy Blog by Hugo</title>
+    <link>http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/</link>
+    <pubDate>Wed, 06 Mar 2019 23:16:51 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/</guid>
+    <description><![CDATA[]]></description>
 </item></channel>
 </rss>

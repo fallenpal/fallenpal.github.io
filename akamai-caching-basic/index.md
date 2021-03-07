@@ -1,10 +1,10 @@
 # Akamai Caching Basic
 
 
+一些比较特殊的状态码的缓存规则笔记。
 <!--more-->
 
 # Akamai Caching Behaviors
-
 
 ## HTTP Status Codes
 
