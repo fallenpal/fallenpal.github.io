@@ -1,4 +1,4 @@
-# Deploy Blog by Hugo
+# 改用Hugo作为Blog生成器
 
 
 <!--more-->

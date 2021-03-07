@@ -1,4 +1,4 @@
-# Akamai Caching Basic
+# Akamai Caching Behaviors
 
 
 一些比较特殊的状态码的缓存规则笔记。
