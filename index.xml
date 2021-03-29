@@ -4,9 +4,16 @@
         <link>http://fallenpal-github-io.vercel.app/</link>
         <description>Yet Another Tech Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fallenpal@gmail.com (Fallenpal)</managingEditor>
-            <webMaster>fallenpal@gmail.com (Fallenpal)</webMaster><lastBuildDate>Sun, 06 Sep 2020 23:16:51 &#43;0800</lastBuildDate>
+            <webMaster>fallenpal@gmail.com (Fallenpal)</webMaster><lastBuildDate>Tue, 09 Mar 2021 00:15:29 &#43;0800</lastBuildDate>
             <atom:link href="http://fallenpal-github-io.vercel.app/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>两种期权策略和Mark Cuban的发家故事</title>
+    <link>http://fallenpal-github-io.vercel.app/options-strategy-and-mark-cuban-story/</link>
+    <pubDate>Tue, 09 Mar 2021 00:15:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://fallenpal-github-io.vercel.app/options-strategy-and-mark-cuban-story/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>改用Hugo作为Blog生成器</title>
     <link>http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/</link>
     <pubDate>Sun, 06 Sep 2020 23:16:51 &#43;0800</pubDate>
@@ -14,25 +21,11 @@
     <guid>http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>Akamai Caching Behaviors</title>
-    <link>http://fallenpal-github-io.vercel.app/akamai-caching-basic/</link>
-    <pubDate>Mon, 16 Sep 2019 11:47:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://fallenpal-github-io.vercel.app/akamai-caching-basic/</guid>
-    <description><![CDATA[<p>一些比较特殊的状态码的缓存规则笔记。</p>]]></description>
-</item><item>
     <title>研究了下Mary Jane这个名字</title>
-    <link>http://fallenpal-github-io.vercel.app/%E7%A0%94%E7%A9%B6%E4%BA%86%E4%B8%8Bmary-jane%E8%BF%99%E4%B8%AA%E5%90%8D%E5%AD%97/</link>
+    <link>http://fallenpal-github-io.vercel.app/mary-jane/</link>
     <pubDate>Wed, 05 Oct 2005 22:51:49 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>http://fallenpal-github-io.vercel.app/%E7%A0%94%E7%A9%B6%E4%BA%86%E4%B8%8Bmary-jane%E8%BF%99%E4%B8%AA%E5%90%8D%E5%AD%97/</guid>
+    <guid>http://fallenpal-github-io.vercel.app/mary-jane/</guid>
     <description><![CDATA[<p>早晨我终于解开了一个很久以来的疑惑。就是Mary Jane这个单词，我不知道你们是否纳闷过，但我一直很奇怪，为什么叫Mary Jane的事物这么多？</p>]]></description>
-</item><item>
-    <title>密码管理思路</title>
-    <link>http://fallenpal-github-io.vercel.app/my-password-mgmt-strategy/</link>
-    <pubDate>Thu, 22 Sep 2005 20:42:11 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://fallenpal-github-io.vercel.app/my-password-mgmt-strategy/</guid>
-    <description><![CDATA[<p>这是一篇给朋友的密码管理思路分享，我想尽量简单地介绍一些保护自己账号安全的方法，尤其是最近爆出安全隐患的苹果账户（Apple ID）。</p>]]></description>
 </item></channel>
 </rss>
