@@ -2,12 +2,8 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://fallenpal-github-io.vercel.app/categories/</loc><lastmod>2021-03-09T00:15:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://fallenpal-github-io.vercel.app/tags/investing/</loc><lastmod>2021-03-09T00:15:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://fallenpal-github-io.vercel.app/posts/</loc><lastmod>2021-03-09T00:15:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://fallenpal-github-io.vercel.app/tags/</loc><lastmod>2021-03-09T00:15:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://fallenpal-github-io.vercel.app/</loc><lastmod>2021-03-09T00:15:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://fallenpal-github-io.vercel.app/options-strategy-and-mark-cuban-story/</loc><lastmod>2021-03-09T00:15:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
-            <loc>http://fallenpal-github-io.vercel.app/categories/%E6%8A%95%E8%B5%84/</loc><lastmod>2021-03-09T00:15:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>http://fallenpal-github-io.vercel.app/posts/</loc><lastmod>2020-09-06T23:16:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://fallenpal-github-io.vercel.app/</loc><lastmod>2020-09-06T23:16:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/</loc><lastmod>2020-09-06T23:16:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://fallenpal-github-io.vercel.app/mary-jane/</loc><lastmod>2005-10-05T22:51:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>http://fallenpal-github-io.vercel.app/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://fallenpal-github-io.vercel.app/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

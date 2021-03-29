@@ -4,26 +4,12 @@
         <link>http://fallenpal-github-io.vercel.app/posts/</link>
         <description>所有文章 | Yet Another Tech Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>fallenpal@gmail.com (Fallenpal)</managingEditor>
-            <webMaster>fallenpal@gmail.com (Fallenpal)</webMaster><lastBuildDate>Tue, 09 Mar 2021 00:15:29 &#43;0800</lastBuildDate><atom:link href="http://fallenpal-github-io.vercel.app/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>两种期权策略和Mark Cuban的发家故事</title>
-    <link>http://fallenpal-github-io.vercel.app/options-strategy-and-mark-cuban-story/</link>
-    <pubDate>Tue, 09 Mar 2021 00:15:29 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://fallenpal-github-io.vercel.app/options-strategy-and-mark-cuban-story/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
+            <webMaster>fallenpal@gmail.com (Fallenpal)</webMaster><lastBuildDate>Sun, 06 Sep 2020 23:16:51 &#43;0800</lastBuildDate><atom:link href="http://fallenpal-github-io.vercel.app/posts/" rel="self" type="application/rss+xml" /><item>
     <title>改用Hugo作为Blog生成器</title>
     <link>http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/</link>
     <pubDate>Sun, 06 Sep 2020 23:16:51 &#43;0800</pubDate>
     <author>作者</author>
     <guid>http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>研究了下Mary Jane这个名字</title>
-    <link>http://fallenpal-github-io.vercel.app/mary-jane/</link>
-    <pubDate>Wed, 05 Oct 2005 22:51:49 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://fallenpal-github-io.vercel.app/mary-jane/</guid>
-    <description><![CDATA[<p>早晨我终于解开了一个很久以来的疑惑。就是Mary Jane这个单词，我不知道你们是否纳闷过，但我一直很奇怪，为什么叫Mary Jane的事物这么多？</p>]]></description>
 </item></channel>
 </rss>
