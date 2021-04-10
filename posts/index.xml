@@ -11,5 +11,12 @@
     <author>作者</author>
     <guid>http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/</guid>
     <description><![CDATA[]]></description>
+</item><item>
+    <title>CORS(跨域资源共享）笔记</title>
+    <link>http://fallenpal-github-io.vercel.app/cors-notes/</link>
+    <pubDate>Fri, 10 Apr 2020 19:56:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://fallenpal-github-io.vercel.app/cors-notes/</guid>
+    <description><![CDATA[<h2 id="cors跨域资源共享是什么">CORS（跨域资源共享）是什么?</h2>]]></description>
 </item></channel>
 </rss>

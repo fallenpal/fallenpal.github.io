@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>CORS(跨域资源共享）笔记 - Yet Another Tech Blog</title><meta name="Description" content=""><meta property="og:title" content="CORS(跨域资源共享）笔记" />
+<meta property="og:description" content="CORS（跨域资源共享）是什么?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fallenpal-github-io.vercel.app/cors-notes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-04-10T19:56:52&#43;08:00" />
+<meta property="article:modified_time" content="2020-04-10T19:56:52&#43;08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CORS(跨域资源共享）笔记"/>
+<meta name="twitter:description" content="CORS（跨域资源共享）是什么?"/>
+<meta name="application-name" content="Fallenpal">
+<meta name="apple-mobile-web-app-title" content="Fallenpal"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://fallenpal-github-io.vercel.app/cors-notes/" /><link rel="next" href="http://fallenpal-github-io.vercel.app/deploy-blog-by-hugo/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "CORS(跨域资源共享）笔记",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/fallenpal-github-io.vercel.app\/cors-notes\/"
+        },"genre": "posts","keywords": "HTTP","wordcount":  2620 ,
+        "url": "http:\/\/fallenpal-github-io.vercel.app\/cors-notes\/","datePublished": "2020-04-10T19:56:52+08:00","dateModified": "2020-04-10T19:56:52+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Fallenpal"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Yet Another Tech Blog">Yet Another Tech Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="Yet Another Tech Blog"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Yet Another Tech Blog">Yet Another Tech Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="Yet Another Tech Blog">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">CORS(跨域资源共享）笔记</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Fallenpal</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-04-10">2020-04-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2620 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#cors跨域资源共享是什么">CORS（跨域资源共享）是什么?</a>
+      <ul>
+        <li><a href="#cors有哪些场景">CORS有哪些场景</a></li>
+        <li><a href="#为什么需要cors">为什么需要CORS？</a></li>
+        <li><a href="#什么情况算跨域">什么情况算跨域？</a></li>
+      </ul>
+    </li>
+    <li><a href="#cors是如何工作的">CORS是如何工作的</a>
+      <ul>
+        <li><a href="#cors的分类">CORS的分类</a></li>
+        <li><a href="#简单请求">简单请求</a>
+          <ul>
+            <li><a href="#包含credentials的请求">包含credentials的请求</a></li>
+          </ul>
+        </li>
+        <li><a href="#复杂请求">复杂请求</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="cors跨域资源共享是什么">CORS（跨域资源共享）是什么?</h2>
+<p>CORS，全称是&quot;跨域资源共享&quot;（Cross-origin resource sharing），是浏览器上控制跨域名通信的一种机制。</p>
+<!--more-->
+<p>更准确地说，跨域是一种访问控制机制，Web服务器基于HTTP Header的信息，决定其他Origin（Origin由域名、协议和端口组成）是否可以访问其资源，并通知浏览器进行允许或阻断。
+An **HTTP-header ** based mechanism that allows a server to indicate any other origins (<strong>domain, protocol, or port</strong>) than its own from which a browser should permit loading of resources.</p>
+<p>定义里的几个关键字：首先是通过HTTP Header进行控制的。然后可以基于协议、域名和端口。</p>
+<p>跨域请求的一个例子：运行在http://a.com 的JS代码，使用[[XHR]]发起一个到http://b.com/data.json的请求</p>
+<p>CORS以来Not implemented on e.g. cURL, WGET etc.</p>
+<h3 id="cors有哪些场景">CORS有哪些场景</h3>
+<p>详细的范围在<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#what_requests_use_cors" target="_blank" rel="noopener noreffer">MDN的说明</a>，一些典型的CORS场景有：foo.com需要从 bar.com获取资源，方式为：</p>
+<ul>
+<li>使用XHR或者Fetch API调用</li>
+<li>使用CSS内 <code>@font-face</code> 获取字体文件</li>
+</ul>
+<p>需要注意的是，如果只是HTML内用<code>&lt;img&gt;</code>的方式获取另一个域的文件，这并不算是跨域请求。但是存放图片的域名往往依然会返回允许跨域的Header，这是因为要考虑到有很多通过XHR获取图片的场景。</p>
+<h3 id="为什么需要cors">为什么需要CORS？</h3>
+<p>跨域的主要作用，是让服务器了解，访问都是从哪些其他域名过来的。另外可以基于来访的域名，进行一定程度的控制。</p>
+<p>相比<code>Referer</code> header，跨域更难伪装，因为跨域是在浏览器层面做的安全检查。浏览器会指定自己发送的<code>Origin</code> header，而我们无法从浏览器内覆盖<code>Origin</code>header。</p>
+<p>然而，使用curl，Python等方式可以自己构建访问，并自由指定<code>Origin</code>, 所以不能完全指望CORS进行严格的安全校验。CORS的更大意义是让服务器知道这个跨域访问是从什么站点发起的。如果需要鉴权，还是应当使用cookie或者其他token鉴权办法。</p>
+<h3 id="什么情况算跨域">什么情况算跨域？</h3>
+<p>一个“域”由协议、域名和端口组成，因此以下这些域名，在浏览器看来，属于不同的域，如果有彼此之间的互访。即被认为跨域访问：</p>
+<ul>
+<li><a href="http://www.foo.com">http://www.foo.com</a></li>
+<li><a href="https://www.foo.com">https://www.foo.com</a></li>
+<li><a href="http://api.foo.com">http://api.foo.com</a></li>
+<li><a href="http://www.foo.com:88">http://www.foo.com:88</a></li>
+<li><a href="http://www.bar.com">http://www.bar.com</a></li>
+</ul>
+<h2 id="cors是如何工作的">CORS是如何工作的</h2>
+<p>CORS需要浏览器和服务器同时支持。目前所有浏览器都支持，但如果客户端使用Curl等方式，是可以绕开检查，不做CORS的。</p>
+<p>CORS机制通过让服务器在响应中增加一系列的header，明确哪些源站允许读取它的信息。如果出现任何错误，可以在[[Chrome Console]]内查看到有关错误代码。</p>
+<h3 id="cors的分类">CORS的分类</h3>
+<p>CORS按照复杂程度分为两类：</p>
+<ol>
+<li>简单请求
+同时满足以下条件的，就是简单请求：</li>
+</ol>
+<ul>
+<li>使用这些Method之一：GET, HEAD, POST</li>
+<li>HTTP Header没有超出以下几种：
+<ul>
+<li>Accept</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+<li>Last-Event-ID</li>
+<li>Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>复杂请求</li>
+</ol>
+<p>不属于简单请求的，就是复杂请求。</p>
+<h3 id="简单请求">简单请求</h3>
+<p>客户端在访问<code>www.foo.com</code>的网页，返回的HTML里有JS代码让客户端发起到<code>www.bar.com</code>的某个资源的请求。客户端向<code>www.bar.com</code>发起Get请求, 浏览器会自动识别到这个请求是去往不同的domain。于是浏览器自动添加一个 <code>Origin</code> header （这个header无法被用户手动修改，因此比referer具有更好的安全性）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Origin: https://www.foo.com
+</code></pre></td></tr></table>
+</div>
+</div><p>服务器对<code>Origin</code>进行检查，如果在服务器的允许范围内，则Response Header中，包含以下字段：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Access-Control-Allow-Origin: &lt;value-of-Origin-header&gt; | *
+</code></pre></td></tr></table>
+</div>
+</div><p><code>*</code> 代表允许所有域名，可以简化服务器的配置，但会降低安全性。并且在某些CORS场景中，如果响应的ACAO值为<code>*</code>的话，则无法继续进行（见credentials章节介绍）。</p>
+<p>需要注意的是，ACAO的value不可以是多个域名被空格或逗号分开等形式，只可以是一个域名。如果服务器希望同时允许多个Origin，可以在服务器上通过程序实现对应逻辑。例如设置一个Origin 列表，并检查访问的<code>Origin: {hostname}</code> 是否在列表内，如果是的话， 就返回对应的 <code>Access-Control-Allow-Origin: {hostname}</code></p>
+<p>下图为详细的CORS简单请求的流程图:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215250.png"
+        data-srcset="http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215250.png, http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215250.png 1.5x, http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215250.png 2x"
+        data-sizes="auto"
+        alt="http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215250.png"
+        title="http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215250.png" /></p>
+<h4 id="包含credentials的请求">包含credentials的请求</h4>
+<p>默认情况下，在XHR和Fetch的场景里，客户端都不会发送任何Credentials。如果客户端发送的请求中指定了会包含credential（<code>withCredentials</code> 为<code>True</code>)：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">invocation</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;http://bar.other/resources/credentialed-content/&#39;</span><span class="p">;</span>
+    
+<span class="kd">function</span> <span class="nx">callOtherDomain</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">invocation</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">invocation</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="nx">invocation</span><span class="p">.</span><span class="nx">withCredentials</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">invocation</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="nx">handler</span><span class="p">;</span>
+    <span class="nx">invocation</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span> 
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>那么服务器的响应必须包含<code>Access-Control-Allow-Credentials: true </code>，否则这个响应会被客户端忽略。另外当credential为true的时候，access-control-allow-origin也不能把再设置为*，因为不被认为是安全的，所以会被拒绝。</p>
+<p>解决办法：</p>
+<ol>
+<li>不再使用credentials</li>
+<li>把acao的value修改为明细的域名</li>
+</ol>
+<h3 id="复杂请求">复杂请求</h3>
+<p>当请求更加“复杂”的时候，例如HTTP method不是GET，POST或HEAD，以及content-type特殊，或者请求的header特殊（这些特殊字段都可以查询MDN规范得到，不必记忆）。</p>
+<p>客户端会先发送一个method为OPTION的preflight 请求，example如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">OPTIONS /doc HTTP/1.1
+Host: bar.other
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Connection: keep-alive
+Origin: http://foo.example
+
+//以下两个header明确了需要使用的method和特殊的header
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+</code></pre></td></tr></table>
+</div>
+</div><p>服务器检查请求的Method和Header后，如果同意，则发送对应的响应，表明同意后续的CORS请求。之后客户端才会发送正式的请求：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">HTTP/1.1 204 No Content
+Date: Mon, 01 Dec 2008 01:15:39 GMT
+Server: Apache/2
+Access-Control-Allow-Origin: https://foo.example
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
+Access-Control-Max-Age: 86400
+Vary: Accept-Encoding, Origin
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive
+</code></pre></td></tr></table>
+</div>
+</div><p>响应中，<code>Access-Control-Allow-Methods</code>表明了服务器允许POST等method，<code>Access-Control-Allow-Headers</code>表明了服务器允许了<code>X-PINGOTHER</code>等特殊header。因此浏览器获取了服务器的允许，会进行后续的跨域请求。</p>
+<p>后续的CORS请求和简单请求完全相同。</p>
+<p>由于preflight 带来了一次额外的访问，增加了延迟和服务器处理的overhead，所以服务器响应中包含了<code>Access-Control-Max-Age</code>, 作用为让浏览器缓存这个信息，后续的访问不再进行preflight的确认。</p>
+<p>以下为详细流程图：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215652.png"
+        data-srcset="http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215652.png, http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215652.png 1.5x, http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215652.png 2x"
+        data-sizes="auto"
+        alt="http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215652.png"
+        title="http://image-fallenpal.test.upcdn.net/Pasted%20image%2020201118215652.png" /></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-04-10</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/cors-notes/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://fallenpal-github-io.vercel.app/cors-notes/" data-title="CORS(跨域资源共享）笔记" data-via="fallenpal" data-hashtags="HTTP"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://fallenpal-github-io.vercel.app/cors-notes/" data-hashtag="HTTP"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://fallenpal-github-io.vercel.app/cors-notes/" data-title="CORS(跨域资源共享）笔记" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://fallenpal-github-io.vercel.app/cors-notes/" data-title="CORS(跨域资源共享）笔记"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Pocket" data-sharer="pocket" data-url="http://fallenpal-github-io.vercel.app/cors-notes/"><i class="fab fa-get-pocket fa-fw"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://fallenpal-github-io.vercel.app/cors-notes/" data-title="CORS(跨域资源共享）笔记"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Myspace" data-sharer="myspace" data-url="http://fallenpal-github-io.vercel.app/cors-notes/" data-title="CORS(跨域资源共享）笔记" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://fallenpal-github-io.vercel.app/cors-notes/" data-title="CORS(跨域资源共享）笔记" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://fallenpal-github-io.vercel.app/cors-notes/" data-title="CORS(跨域资源共享）笔记"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/http/">HTTP</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/deploy-blog-by-hugo/" class="next" rel="next" title="改用Hugo作为Blog生成器">改用Hugo作为Blog生成器<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.81.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2017 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Fallenpal</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
